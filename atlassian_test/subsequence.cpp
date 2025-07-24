@@ -1,0 +1,1 @@
+// there is a string given containing ones and zeros , find the no of subsequences of this string that are palindromes of length 5
