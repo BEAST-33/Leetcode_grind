@@ -12,23 +12,20 @@
     return uniquestrings.size();
  }
  void helper(int idx, string& s, set<string>& uniquestrings){
-    if (idx >= s.size()-1){
-        return;
-    }
-    if ( idx +1 <=s.size()-1){
-        char temp = s[idx+1];
-        s[idx+1]=s[idx];
-        s[idx]=temp;
-        uniquestrings.insert(s);
-        helper(idx+2,s,uniquestrings);
-    }
-    if ( idx +2 <=s.size()-1){
-        char temp = s[idx+2];
-        s[idx+2]=s[idx+1];
-        s[idx+1]=temp;
-        uniquestrings.insert(s);
-        helper(idx+3,s,uniquestrings);
-    }
+    int n = s.size();
+   vector<vector<int> > dp(n , vector<int> (n+1,0));
+   for ( int i=0;i<=n;i++){
+    dp[0]= 1;
+   }
+   for ( int i=1;i<n;i++){
+    for (int j=0;j<=n;j++ )
+        int nottake = dp[i-1][j];
+        int take=0;
+
+        dp[i][j]= take + nottake;
+
+   }
+
 
  }
 
