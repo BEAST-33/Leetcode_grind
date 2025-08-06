@@ -59,7 +59,8 @@
         "set": "cpp",
         "map": "cpp",
         "__tree": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "valarray": "cpp"
     }
     
 }
